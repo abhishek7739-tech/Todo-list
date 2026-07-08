@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tik tok toe</title>
+    <style>
+      body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f4f4f9, #e0e7ff);
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 50px auto;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+caption {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2c3e50;
+    letter-spacing: 1px;
+}
+
+/* Task rows */
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.todo-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Circular checkbox */
+input[type="checkbox"] {
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 12px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    box-shadow: 0 0 6px rgba(76, 175, 80, 0.6);
+}
+
+input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+}
+
+/* Completed task effect */
+input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: #888;
+    transition: color 0.3s ease;
+}
+
+label {
+    flex: 1;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Button styling */
+button {
+    padding: 10px 16px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #45a049, #3e8e41);
+}
+
+    </style>
+</head>
+<body>
+    <div id="root">
+        <caption>TO DO</caption>
+
+      <div ><br>
+        <input type="checkbox" id="eat">
+      <label for="eat">eat</label>
+    </div>
+
+    <div >
+      <input type="checkbox" id="code">
+      <label for="code">code</label>
+    </div>
+      
+    <div >
+       <input type="checkbox" id="sleep">
+      <label for="sleep">sleep</label>
+    </div>
+
+    <div >
+      <input type="checkbox" id="repeat">
+      <label for="repeat">repeat</label>
+    </div><br>
+
+      <button type="submit">Add todo</button>
+    </div>
+
+    <script src="/coding/summer_trainning/javascript/todo.js"></script>
+</body>
+</html>
